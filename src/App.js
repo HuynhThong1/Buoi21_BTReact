@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import DemoComponent from './components/DemoComponent';
+import DemoFComponent from './components/DemoFComponent';
+import BaiTapComponent from './components/BaiTapComponent/BaiTapComponent';
+import BaiTapLayoutBootstrap from './components/BaiTapLayoutBootstrap/BaiTapLayoutBootstrap';
+import DataBinding from './DataBinding/DataBinding';
+import DataBindingF from './DataBinding/DataBindingF';
 
-function App() {
+function App() { //component gốc của ứng dụng
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      {/* <BaiTapComponent></BaiTapComponent> */}
+      <BaiTapLayoutBootstrap />
+      {/* <DataBinding /> */}
+
+      {/* <DataBindingF/> */}
     </div>
   );
 }
