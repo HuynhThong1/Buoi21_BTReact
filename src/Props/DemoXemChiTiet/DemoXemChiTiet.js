@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SanPham from './SanPham';
 import Cart from './Cart';
+import './addToCart.css';
 
 export default class DemoXemChiTiet extends Component {
 
@@ -27,10 +28,10 @@ export default class DemoXemChiTiet extends Component {
 
         let spGH = gioHangCapNhat.find(spGH => spGH.maSP === maSP);
 
-        if(spGH){
+        if (spGH) {
             spGH.soLuong += soLuong;
 
-            if(spGH.soLuong < 1){
+            if (spGH.soLuong < 1) {
                 alert('số lượng tối thiểu là 1.');
                 spGH.soLuong -= soLuong;
                 // this.xoaGioHang(maSP);
@@ -84,10 +85,10 @@ export default class DemoXemChiTiet extends Component {
 
         let index = gioHangCapNhat.findIndex(spGH => spGH.maSP === maSP);
 
-        if(index !== -1){
-            gioHangCapNhat.splice(index,1);
+        if (index !== -1) {
+            gioHangCapNhat.splice(index, 1);
         }
-        
+
         // another way delete item
         // gioHangCapNhat = gioHangCapNhat.filter(sp => sp.maSP !== maSP);
 
@@ -131,7 +132,7 @@ export default class DemoXemChiTiet extends Component {
         return tongSoLuong;
     }
 
-    
+
 
 
     render() {
@@ -142,8 +143,11 @@ export default class DemoXemChiTiet extends Component {
             <div className="container">
                 <Cart gioHang={this.state.gioHang} xoaGioHang={this.xoaGioHang} tangGiamSoLuong={this.tangGiamSoLuong}></Cart>
                 <h3>Danh Sách Sản Phẩm</h3>
-                <div className="text-right">
-                    <span className="btn" data-toggle="modal" data-target="#modelId">Giỏ hàng ({this.tinhTongSoLuong()})</span>
+                <div className="text-right ">
+                    <div className="counter-container">
+                        <span id="counter">{this.tinhTongSoLuong()}</span>
+                        <i class="fas fa-shopping-cart" data-toggle="modal" data-target="#modelId"></i>
+                    </div>
                 </div>
                 <div className="row">
                     {this.renderSanPham()}
