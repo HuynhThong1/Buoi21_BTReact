@@ -13,7 +13,7 @@
 
 //import DemoProps from './Props/DemoProps';
 
-import ProductList  from './Props/ProductList';
+// import ProductList  from './Props/ProductList';
 import DemoXemChiTiet from './Props/DemoXemChiTiet/DemoXemChiTiet';
 
 function App() { //component gốc của ứng dụng
