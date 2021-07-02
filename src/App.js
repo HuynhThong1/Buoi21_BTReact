@@ -14,7 +14,8 @@
 //import DemoProps from './Props/DemoProps';
 
 // import ProductList  from './Props/ProductList';
-import DemoXemChiTiet from './Props/DemoXemChiTiet/DemoXemChiTiet';
+//import DemoXemChiTiet from './Props/DemoXemChiTiet/DemoXemChiTiet';
+import DanhSachSanPhamRedux from './DemoRedux/BTGioHangRedux/DanhSachSanPhamRedux';
 
 function App() { //component gốc của ứng dụng
   return (
@@ -32,7 +33,9 @@ function App() { //component gốc của ứng dụng
       {/* <DemoProps></DemoProps> */}
       {/* <ProductList></ProductList> */}
 
-      <DemoXemChiTiet></DemoXemChiTiet>
+      {/* <DemoXemChiTiet></DemoXemChiTiet> */}
+
+      <DanhSachSanPhamRedux></DanhSachSanPhamRedux>
     </div>
   );
 }

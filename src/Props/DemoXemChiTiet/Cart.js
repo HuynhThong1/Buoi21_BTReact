@@ -13,7 +13,7 @@ export default class Cart extends Component {
         //Nhận giá trị giỏ hàng từ component demoXemChiTiet
         let { gioHang } = this.props;
 
-        let {tangGiamSoLuong} = this.props;
+        let { tangGiamSoLuong } = this.props;
 
         return gioHang.map((spGH, index) => {
             return <tr key={index}>
@@ -44,7 +44,7 @@ export default class Cart extends Component {
                 <div>
                     {/* Modal */}
                     <div className="modal fade" id="modelId" tabIndex={-1} role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                        <div className="modal-dialog modal-lg" style={{maxWidth: '1000px'}} role="document">
+                        <div className="modal-dialog modal-lg" style={{ maxWidth: '1000px' }} role="document">
                             <div className="modal-content">
                                 <div className="modal-header">
                                     <h5 className="modal-title">Giỏ Hàng</h5>
@@ -69,11 +69,13 @@ export default class Cart extends Component {
                                             {this.renderGioHang()}
                                         </tbody>
                                         <tfoot>
-                                            <td colSpan="5"></td>
-                                            <td>Tổng tiền</td>
-                                            <td>{this.props.gioHang.reduce((tongTien, spGH, index) => {
-                                                return tongTien += spGH.soLuong * spGH.giaBan;
-                                            }, 0).toLocaleString()}</td>
+                                            <tr>
+                                                <td colSpan="5"></td>
+                                                <td>Tổng tiền</td>
+                                                <td>{this.props.gioHang.reduce((tongTien, spGH, index) => {
+                                                    return tongTien += spGH.soLuong * spGH.giaBan;
+                                                }, 0).toLocaleString()}</td>
+                                            </tr>
                                         </tfoot>
                                     </table>
                                 </div>

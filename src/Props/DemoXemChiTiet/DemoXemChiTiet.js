@@ -92,9 +92,15 @@ export default class DemoXemChiTiet extends Component {
         // another way delete item
         // gioHangCapNhat = gioHangCapNhat.filter(sp => sp.maSP !== maSP);
 
+
         this.setState({
             gioHang: gioHangCapNhat
         })
+
+
+
+
+
     }
 
     renderSanPham = () => {
@@ -132,9 +138,6 @@ export default class DemoXemChiTiet extends Component {
         return tongSoLuong;
     }
 
-
-
-
     render() {
 
         let { sanPhamChiTiet } = this.state;
@@ -143,11 +146,13 @@ export default class DemoXemChiTiet extends Component {
             <div className="container">
                 <Cart gioHang={this.state.gioHang} xoaGioHang={this.xoaGioHang} tangGiamSoLuong={this.tangGiamSoLuong}></Cart>
                 <h3>Danh Sách Sản Phẩm</h3>
-                <div className="text-right ">
-                    <div className="counter-container">
+                {/* <div className="counter-container">
                         <span id="counter">{this.tinhTongSoLuong()}</span>
                         <i class="fas fa-shopping-cart" data-toggle="modal" data-target="#modelId"></i>
-                    </div>
+                </div> */}
+                <div className="text-right counter-container">
+                    <span id="counter" className="d-none">{this.tinhTongSoLuong()}</span>
+                    <i className="fas fa-shopping-cart" data-toggle="modal" data-target="#modelId"></i>
                 </div>
                 <div className="row">
                     {this.renderSanPham()}
