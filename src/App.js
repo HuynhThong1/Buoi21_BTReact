@@ -15,7 +15,8 @@
 
 // import ProductList  from './Props/ProductList';
 //import DemoXemChiTiet from './Props/DemoXemChiTiet/DemoXemChiTiet';
-import DanhSachSanPhamRedux from './DemoRedux/BTGioHangRedux/DanhSachSanPhamRedux';
+// import DanhSachSanPhamRedux from './DemoRedux/BTGioHangRedux/DanhSachSanPhamRedux';
+import Home from './UserManagementRedux';
 
 function App() { //component gốc của ứng dụng
   return (
@@ -29,13 +30,11 @@ function App() { //component gốc của ứng dụng
       {/* <RenderWithState></RenderWithState> */}
       {/* <BaiTapChonXe></BaiTapChonXe> */}
       {/* <RenderWithMap></RenderWithMap> */}
-
       {/* <DemoProps></DemoProps> */}
       {/* <ProductList></ProductList> */}
-
       {/* <DemoXemChiTiet></DemoXemChiTiet> */}
-
-      <DanhSachSanPhamRedux></DanhSachSanPhamRedux>
+      {/* <DanhSachSanPhamRedux></DanhSachSanPhamRedux> */}
+      <Home></Home>
     </div>
   );
 }
